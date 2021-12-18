@@ -1,40 +1,30 @@
 ﻿using System;
-// C# Program to Check Whether an Alphabet is Vowel or Consonant.
+// C# Program to Find the Largest Among Three Numbers
 class Program
 {
     static void Main(string[] args)
     {
-        char ch;
-        Console.Write("Input an Alphabet (A-Z or a-z) : ");
-        ch = Convert.ToChar(Console.ReadLine().ToLower());
-        int i = ch;
-        if (i >= 48 && i <= 57)
+        Console.Write("Input the 1st number :");
+        int num1 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Input the  2nd number :");
+        int num2 = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Input the 3rd  number :");
+        int num3 = Convert.ToInt32(Console.ReadLine());
+
+        if (num1 > num2)
         {
-            Console.Write("You entered a number, Please enter an alpahbet.");
-        }
-        else
-        {
-            switch (ch)
+            if (num1 > num3)
             {
-                case 'a':
-                    Console.WriteLine("The {0} Alphabet is vowel",ch);
-                    break;
-                case 'i':
-                    Console.WriteLine("The {0} Alphabet is vowel", ch);
-                    break;
-                case 'o':
-                    Console.WriteLine("The {0} Alphabet is vowel", ch);
-                    break;
-                case 'u':
-                    Console.WriteLine("The {0} Alphabet is vowel", ch);
-                    break;
-                case 'e':
-                    Console.WriteLine("The {0} Alphabet is vowel", ch);
-                    break;
-                default:
-                    Console.WriteLine("The {0} Alphabet is Consonant", ch);
-                    break;
+                Console.WriteLine("The 1st Number is the greatest among three: "+num1);
+            }
+            else
+            {
+                Console.WriteLine("The 3rd Number is the greatest among three: "+num2);
             }
         }
+        else if (num2 > num3)
+            Console.WriteLine("The 2nd Number is the greatest among three: "+num2);
+        else
+            Console.WriteLine("The 3rd Number is the greatest among three: "+num3);
     }
 }
