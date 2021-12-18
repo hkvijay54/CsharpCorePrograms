@@ -1,5 +1,5 @@
 ﻿using System;
-// Flip Coin and print percentage of Heads and Tails
+// Flip Coin and print percentage of Heads and Tails.
 class Program
 {
     static void Main(string[] args)
