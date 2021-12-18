@@ -1,16 +1,27 @@
 ﻿using System;
-// Power of 2.
+// Harmonic value
 class Program
 {
     static void Main(string[] args)
     {
         Console.WriteLine("Enter a number : ");  
         int num = Convert.ToInt32(Console.ReadLine());
-        double res;
-        for(int i=0;i<=num;i++)
+        float res=1;
+        for(int i=1;i<=num;i++)
         {
-            res = Math.Pow(2, i);
-            Console.WriteLine("2^" + i + "= " + res);
+            res = (res + 1) / i;
+            if(i == 1)
+            {
+                Console.Write("1 + ");
+            }
+            else if(i == num)
+            {
+                Console.Write("1/" + i + " = " + res);
+            }
+            else
+            {
+                Console.Write("1/" + i + " +");
+            }
         }
     }
 }
