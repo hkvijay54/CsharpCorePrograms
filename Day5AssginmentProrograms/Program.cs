@@ -1,18 +1,40 @@
 ﻿using System;
-// Program to Check Whether a Number is Even or Odd.
+// C# Program to Check Whether an Alphabet is Vowel or Consonant.
 class Program
 {
     static void Main(string[] args)
     {
-        int num1, rem1;
-
-        Console.WriteLine("Input an integer : ");
-        num1 = Convert.ToInt32(Console.ReadLine());
-        rem1 = num1 % 2;
-
-        if (rem1 == 0)
-            Console.WriteLine("{0} is an even integer", num1);
+        char ch;
+        Console.Write("Input an Alphabet (A-Z or a-z) : ");
+        ch = Convert.ToChar(Console.ReadLine().ToLower());
+        int i = ch;
+        if (i >= 48 && i <= 57)
+        {
+            Console.Write("You entered a number, Please enter an alpahbet.");
+        }
         else
-            Console.WriteLine("{0} is an odd integer", num1);
+        {
+            switch (ch)
+            {
+                case 'a':
+                    Console.WriteLine("The {0} Alphabet is vowel",ch);
+                    break;
+                case 'i':
+                    Console.WriteLine("The {0} Alphabet is vowel", ch);
+                    break;
+                case 'o':
+                    Console.WriteLine("The {0} Alphabet is vowel", ch);
+                    break;
+                case 'u':
+                    Console.WriteLine("The {0} Alphabet is vowel", ch);
+                    break;
+                case 'e':
+                    Console.WriteLine("The {0} Alphabet is vowel", ch);
+                    break;
+                default:
+                    Console.WriteLine("The {0} Alphabet is Consonant", ch);
+                    break;
+            }
+        }
     }
 }
