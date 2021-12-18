@@ -1,27 +1,31 @@
 ﻿using System;
-// Harmonic value
+// prime factorisation.
 class Program
 {
-    static void Main(string[] args)
+    public static void PrimeFact(int n)
     {
-        Console.WriteLine("Enter a number : ");  
-        int num = Convert.ToInt32(Console.ReadLine());
-        float res=1;
-        for(int i=1;i<=num;i++)
+        while (n % 2 == 0)
         {
-            res = (res + 1) / i;
-            if(i == 1)
+            Console.Write(2 + " ");
+            n /= 2;
+        }
+        for (int i = 3; i <= Math.Sqrt(n); i += 2)
+        {
+            while(n%i == 0)
             {
-                Console.Write("1 + ");
-            }
-            else if(i == num)
-            {
-                Console.Write("1/" + i + " = " + res);
-            }
-            else
-            {
-                Console.Write("1/" + i + " +");
+                Console.Write(i + " ");
+                n /= i;
             }
         }
+        if(n>2)
+        {
+            Console.Write(n);
+        }
+    }
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number");
+        int n = Convert.ToInt32(Console.ReadLine());
+        PrimeFact(n);
     }
 }
